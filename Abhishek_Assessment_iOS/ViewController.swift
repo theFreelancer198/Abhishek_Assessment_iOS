@@ -82,15 +82,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let data = viewModel.jsonData[indexPath.row]
         cell?.textLabel?.text = "\(data.id)"
+        cell?.textLabel?.font = .boldSystemFont(ofSize: 15)
         cell?.detailTextLabel?.text = "\(data.title)"
         cell?.detailTextLabel?.numberOfLines = 0
+        cell?.detailTextLabel?.font = .systemFont(ofSize: 15)
         return cell ?? UITableViewCell()
     }
 
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedData = viewModel.jsonData[indexPath.row]
+
+        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        detailViewController.dataDetails = selectedData
+
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+
+       tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 
     // MARK: Pagination  - Disabled as provided api doesnot support pagination
