@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: BaseViewController {
     var dataDetails:AJModel?
     
     override func viewDidLoad() {
@@ -19,36 +19,37 @@ class DetailViewController: UIViewController {
     private func configureUI() {
         guard let dataDetails = dataDetails else { return }
         
-        self.title = "\(dataDetails.id)"
+        self.title = "Item \(dataDetails.id)"
         
         let titleLabel = UILabel()
-        titleLabel.text = dataDetails.title
+        titleLabel.text = dataDetails.title.firstUppercased
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .left
-        titleLabel.font = .boldSystemFont(ofSize: 18)
+        titleLabel.font = .boldSystemFont(ofSize: 15)
        
         let detailLabel = UILabel()
         detailLabel.text = dataDetails.body
         detailLabel.textAlignment = .left
+        detailLabel.font = .systemFont(ofSize: 15)
         detailLabel.numberOfLines = 0
         
         let marginView = UIView()
         marginView.backgroundColor = .clear
         
+        
         let stackView = UIStackView(arrangedSubviews: [titleLabel, detailLabel, marginView])
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.backgroundColor = .systemGray5
-        stackView.spacing = 16
-        
+       // stackView.backgroundColor = .systemGray5
+        stackView.spacing = 12
         view.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+                         
             titleLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8),
             titleLabel.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 12),

@@ -17,6 +17,8 @@
 		46EEA7062BDFE26C00FC5DD3 /* AJModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEA7052BDFE26C00FC5DD3 /* AJModel.swift */; };
 		46EEA7082BDFE27B00FC5DD3 /* AJViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEA7072BDFE27B00FC5DD3 /* AJViewModel.swift */; };
 		46EEA70A2BDFE5DF00FC5DD3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEA7092BDFE5DF00FC5DD3 /* DetailViewController.swift */; };
+		46EEA70C2BE00AF800FC5DD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEA70B2BE00AF800FC5DD3 /* BaseViewController.swift */; };
+		46EEA70E2BE01F5400FC5DD3 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEA70D2BE01F5400FC5DD3 /* CustomLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		46EEA7052BDFE26C00FC5DD3 /* AJModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AJModel.swift; sourceTree = "<group>"; };
 		46EEA7072BDFE27B00FC5DD3 /* AJViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AJViewModel.swift; sourceTree = "<group>"; };
 		46EEA7092BDFE5DF00FC5DD3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		46EEA70B2BE00AF800FC5DD3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		46EEA70D2BE01F5400FC5DD3 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 				46EEA7052BDFE26C00FC5DD3 /* AJModel.swift */,
 				46EEA7072BDFE27B00FC5DD3 /* AJViewModel.swift */,
 				46EEA6F22BDFD2A400FC5DD3 /* ViewController.swift */,
+				46EEA70D2BE01F5400FC5DD3 /* CustomLoader.swift */,
 				46EEA7092BDFE5DF00FC5DD3 /* DetailViewController.swift */,
+				46EEA70B2BE00AF800FC5DD3 /* BaseViewController.swift */,
 				46EEA6F42BDFD2A400FC5DD3 /* Main.storyboard */,
 				46EEA6FA2BDFD2A600FC5DD3 /* Assets.xcassets */,
 				46EEA6FC2BDFD2A600FC5DD3 /* LaunchScreen.storyboard */,
@@ -152,9 +158,11 @@
 			files = (
 				46EEA6F32BDFD2A400FC5DD3 /* ViewController.swift in Sources */,
 				46EEA7082BDFE27B00FC5DD3 /* AJViewModel.swift in Sources */,
+				46EEA70E2BE01F5400FC5DD3 /* CustomLoader.swift in Sources */,
 				46EEA6EF2BDFD2A400FC5DD3 /* AppDelegate.swift in Sources */,
 				46EEA7062BDFE26C00FC5DD3 /* AJModel.swift in Sources */,
 				46EEA6F92BDFD2A400FC5DD3 /* Abhishek_Assessment_iOS.xcdatamodeld in Sources */,
+				46EEA70C2BE00AF800FC5DD3 /* BaseViewController.swift in Sources */,
 				46EEA6F12BDFD2A400FC5DD3 /* SceneDelegate.swift in Sources */,
 				46EEA70A2BDFE5DF00FC5DD3 /* DetailViewController.swift in Sources */,
 			);
